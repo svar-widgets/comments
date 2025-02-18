@@ -10,8 +10,8 @@ export const links = [
 	["/base/:skin", "Comments basic", BasicInit],
 	["/markdown/:skin", "Markdown content", MarkdownInit],
 	["/events/:skin", "Events", Events],
-	["/locale/:skin", "Localization", Locale],
-	["/backend-url/:skin", "Save to Backend", BackendUrl],
-	["/backend-custom/:skin", "Custom Backend", CustomBackend],
-	["/data-resolve/:skin", "Resolve and Fetch", BackendResolve],
+	["/locale/:skin", "Locales", Locale],
+	["/backend-url/:skin", "Save to backend", BackendUrl],
+	["/backend-custom/:skin", "Custom backend", CustomBackend],
+	["/data-resolve/:skin", "Resolve and fetch", BackendResolve],
 ];

@@ -1,15 +1,23 @@
-### 2.0.0
+## 2.1.0
 
--   public release
+-   Using core@2.1.0, menu@2.1.0
 
-### 0.2.1
+## 2.0.0
 
--   [update] autofocus is replaced by `focus` property
+-   Public release
 
-### 0.2.0
+## 0.2.1
 
--   [update] data sync api
+### Updates
 
-### 0.1.0
+-   `autofocus` is replaced by `focus` property
 
--   initial version
+## 0.2.0
+
+### Updates
+
+-   Data sync api
+
+## 0.1.0
+
+-   Initial version
