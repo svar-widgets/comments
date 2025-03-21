@@ -1,6 +1,6 @@
 {
 	"name": "wx-comments-locales",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"description": "Locales for WX Comments widget",
 	"type": "module",
 	"main": "index.js",

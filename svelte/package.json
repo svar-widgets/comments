@@ -1,6 +1,6 @@
 {
 	"name": "wx-svelte-comments",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"description": "Simple Svelte component for adding a comments section on a page",
 	"productTag": "comments",
 	"productTrial": false,
@@ -32,12 +32,12 @@
 	},
 	"homepage": "https://svar.dev/svelte/core/",
 	"dependencies": {
-		"wx-comments-locales": "2.1.0",
+		"wx-comments-locales": "2.1.1",
 		"wx-lib-data-provider": "1.6.0",
 		"wx-lib-dom": "0.8.0",
 		"wx-lib-state": "1.9.0",
-		"wx-svelte-core": "2.1.0",
-		"wx-svelte-menu": "2.1.0"
+		"wx-svelte-core": "2.1.1",
+		"wx-svelte-menu": "2.1.1"
 	},
 	"files": [
 		"src",
