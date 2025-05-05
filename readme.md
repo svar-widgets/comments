@@ -16,6 +16,12 @@
 
 A Svelte UI component for creating a comments section. Supports adding, editing, and deleting comments with ease.
 
+<div align="center">
+	
+<img src="https://svar.dev/images/github/github-commenta.png" alt="SVAR Comments - Svelte Comments Section" style="width: 700px;">
+
+</div>
+
 ### How to Use
 
 To use the widget, simply import the package and include the component in your Svelte file:
@@ -29,6 +35,8 @@ To use the widget, simply import the package and include the component in your S
 
 <Comments {value} />
 ```
+
+For further instructions, visit the [documentation](https://docs.svar.dev/svelte/core/comments/). 
 
 ### How to Modify
 
