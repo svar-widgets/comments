@@ -36,7 +36,7 @@ To use the widget, simply import the package and include the component in your S
 <Comments {value} />
 ```
 
-For further instructions, visit the [documentation](https://docs.svar.dev/svelte/core/comments/). 
+For further instructions, visit the [documentation](https://docs.svar.dev/svelte/core/comments/).
 
 ### How to Modify
 

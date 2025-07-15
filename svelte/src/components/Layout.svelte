@@ -1,5 +1,5 @@
 <script>
-	import { getContext, setContext } from "svelte";
+	import { getContext, setContext, untrack } from "svelte";
 	import Messages from "./Messages.svelte";
 	import TextArea from "./TextArea.svelte";
 	import { ActionMenu } from "wx-svelte-menu";
@@ -18,7 +18,6 @@
 		focus = false,
 	} = $props();
 
-	let edit = $state(null);
 	const lang = getContext("wx-i18n");
 	const { calendar, comments, formats } = lang.getRaw();
 	const _ = lang.getGroup("comments");
@@ -31,13 +30,28 @@
 		dateStr: date => dateFormatter(date),
 	});
 
+	let edit = $state(null);
+	let value = $state("");
+
+	$effect(() => {
+		rawData;
+		untrack(() => {
+			// Clear editing state when rawData is updated
+			value = "";
+			edit = null;
+		});
+	});
+
 	const unknownUser = { id: 0, name: _("Unknown"), color: "hsl(0, 0%, 85%)" };
 
 	const users = $derived.by(() => {
 		if (!rawUsers) return [];
 		return rawUsers.map(u => {
-			if (!u.color) 
-				return { ...u, color: "hsl(" + getColor(u.id + u.name) + ", 100%, 85%)" };
+			if (!u.color)
+				return {
+					...u,
+					color: "hsl(" + getColor(u.id + u.name) + ", 100%, 85%)",
+				};
 			return u;
 		});
 	});
@@ -46,7 +60,11 @@
 		if (typeof activeUser === "object") return activeUser;
 		const a = users.find(u => u.id === activeUser) || unknownUser;
 		if (a) return a;
-		return { id: activeUser || -1, name: _("Me"), color: "hsl(225, 76%, 67%)" };
+		return {
+			id: activeUser || -1,
+			name: _("Me"),
+			color: "hsl(225, 76%, 67%)",
+		};
 	});
 
 	const data = $derived.by(() => {
@@ -83,11 +101,11 @@
 		};
 
 		rawData = [...data, comment];
-		if (onchange){
-			const res = onchange({ value:rawData, comment, action: "add" });
-			if (res && typeof res === "object"){
-				if (res.then){
-					res.then((data) => {
+		if (onchange) {
+			const res = onchange({ value: rawData, comment, action: "add" });
+			if (res && typeof res === "object") {
+				if (res.then) {
+					res.then(data => {
 						updateAfter(comment.id, data);
 					});
 				} else {
@@ -97,17 +115,15 @@
 		}
 	}
 
-	function updateAfter(id, data){
+	function updateAfter(id, data) {
 		const index = rawData.findIndex(d => d.id === id);
 
-		const copy = [ ...rawData ];
+		const copy = [...rawData];
 		copy[index] = { ...rawData[index], ...data };
 		rawData = copy;
 	}
 
 	function remove(id) {
-		if (edit === id) edit = null;
-
 		rawData = rawData.filter(d => d.id !== id);
 		onchange && onchange({ value: rawData, id, action: "delete" });
 	}
@@ -120,7 +136,6 @@
 				return comment;
 			} else return d;
 		});
-		edit = null;
 
 		onchange && onchange({ value: rawData, id, action: "update", comment });
 	}
@@ -190,7 +205,8 @@
 			flow={render === "flow"}
 			{focus}
 			onpost={ev => add(ev.value)}
-			buttonLabel={_("Add")}
+			buttonLabel={"Add"}
+			bind:value
 		/>
 	{/if}
 </div>

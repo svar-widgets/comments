@@ -3,6 +3,7 @@ export default {
 		Add: "Add",
 		Edit: "Edit",
 		Delete: "Delete",
+		Send: "Send",
 		Unknown: "Unknown",
 		Me: "Me",
 		"Add a comment...": "Add a comment...",

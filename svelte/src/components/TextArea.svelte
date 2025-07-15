@@ -50,7 +50,7 @@
 		<TextArea placeholder={_("Add a comment...")} bind:value />
 	</div>
 	<div class="wx-textarea-bottombar">
-		<Button type="primary" {onclick}>{buttonLabel}</Button>
+		<Button type="primary" {onclick}>{_(buttonLabel)}</Button>
 	</div>
 </div>
 

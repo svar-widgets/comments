@@ -7,11 +7,16 @@ import CustomBackend from "./cases/CustomBackend.svelte";
 import BackendResolve from "./cases/BackendResolve.svelte";
 
 export const links = [
-	["/base/:skin", "Comments basic", BasicInit],
-	["/markdown/:skin", "Markdown content", MarkdownInit],
-	["/events/:skin", "Events", Events],
-	["/locale/:skin", "Locales", Locale],
-	["/backend-url/:skin", "Save to backend", BackendUrl],
-	["/backend-custom/:skin", "Custom backend", CustomBackend],
-	["/data-resolve/:skin", "Resolve and fetch", BackendResolve],
+	["/base/:skin", "Comments basic", BasicInit, "BasicInit"],
+	["/markdown/:skin", "Markdown content", MarkdownInit, "MarkdownInit"],
+	["/events/:skin", "Events", Events, "Events"],
+	["/locale/:skin", "Locales", Locale, "Locale"],
+	["/backend-url/:skin", "Save to backend", BackendUrl, "BackendUrl"],
+	["/backend-custom/:skin", "Custom backend", CustomBackend, "CustomBackend"],
+	[
+		"/data-resolve/:skin",
+		"Resolve and fetch",
+		BackendResolve,
+		"BackendResolve",
+	],
 ];

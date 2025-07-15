@@ -1,3 +1,13 @@
+## 2.2.0
+
+### New features
+
+-   Ability to localize text labels
+
+### Fixes
+
+-   Input is not cleared when data is reloaded
+
 ## 2.1.0
 
 -   Using core@2.1.0, menu@2.1.0
@@ -16,7 +26,7 @@
 
 ### Updates
 
--   Data sync api
+-   Data sync API
 
 ## 0.1.0
 
