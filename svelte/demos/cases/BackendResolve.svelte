@@ -9,7 +9,7 @@
 	);
 	const users = getData().users;
 
-	let id = 1;
+	let id = $state(1);
 	const options = [
 		{ id: 1, label: "Page 1" },
 		{ id: 2, label: "Page 2" },

@@ -7,7 +7,7 @@
 
 	let prev = localStorage.getItem("--comments-demo-data");
 	let data = prev ? JSON.parse(prev) : stub.data;
-	let message = "";
+	let message = $state("");
 
 	function callback(action, obj) {
 		switch (action) {

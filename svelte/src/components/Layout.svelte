@@ -174,7 +174,8 @@
 		},
 	];
 
-	let menu = $state(null);
+	let menu = null;
+	const showMenu = ev => menu.show(ev);
 </script>
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -188,7 +189,7 @@
 		dataKey="commentMenuId"
 		onclick={handleActionMenu}
 	/>
-	<div class="wx-list" onclick={menu.show}>
+	<div class="wx-list" onclick={showMenu}>
 		<Messages
 			{author}
 			{render}

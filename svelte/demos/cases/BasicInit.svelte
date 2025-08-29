@@ -9,7 +9,7 @@
 		{ label: "Flow", id: "flow" },
 	];
 
-	let render = "flow";
+	let render = $state("flow");
 </script>
 
 <div class="toolbar">

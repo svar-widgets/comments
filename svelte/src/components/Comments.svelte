@@ -2,6 +2,7 @@
 	import Layout from "./Layout.svelte";
 	import { Locale } from "wx-svelte-core";
 	import { en } from "wx-comments-locales";
+	import { en as coreEn } from "wx-core-locales";
 
 	const { ondata, onchange, value, ...props } = $props();
 	const finalData = $derived(ondata && value ? ondata(value) : value);
@@ -12,7 +13,7 @@
 	};
 </script>
 
-<Locale words={en} optional={true}>
+<Locale words={{ ...coreEn, ...en }} optional={true}>
 	{#await finalData}
 		<Layout data={[]} {...props} onchange={handleOnchange} />
 	{:then data}

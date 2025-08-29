@@ -4,7 +4,6 @@
 		Willow,
 		WillowDark,
 		Globals,
-		Locale,
 		popupContainer,
 		Button,
 		Segmented,
@@ -149,11 +148,9 @@
 		</div>
 		<div class="wrapper-content" onclick={() => (show = false)} role="none">
 			<div use:popupContainer class="content wx-{skin}-theme" role="none">
-				<Locale>
-					<Globals>
-						<Router onnewpage={updateInfo} {skin} />
-					</Globals>
-				</Locale>
+				<Globals>
+					<Router onnewpage={updateInfo} {skin} />
+				</Globals>
 			</div>
 		</div>
 	</div>
@@ -173,6 +170,7 @@
 			overflow: auto;
 
 			.page-content-header {
+				height: 70px;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
@@ -277,7 +275,7 @@
 
 	.wrapper-content {
 		flex: 1;
-
+		height: calc(100% - 70px);
 		.content {
 			width: 100%;
 			height: 100%;

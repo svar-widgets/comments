@@ -4,7 +4,7 @@
 
 	const { data, users } = getData();
 
-	let message = "";
+	let message = $state("");
 	function trackChanges({ action, id, comment }) {
 		switch (action) {
 			case "add":
@@ -26,12 +26,7 @@
 <div class="message">{message}</div>
 <div>
 	<div class="wrapper">
-		<Comments
-			value={data}
-			{users}
-			activeUser={1}
-			onchange={trackChanges}
-		/>
+		<Comments value={data} {users} activeUser={1} onchange={trackChanges} />
 	</div>
 </div>
 

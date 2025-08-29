@@ -12,14 +12,14 @@
 		{ label: "Flow", id: "flow" },
 	];
 
-	let render = "flow";
+	let render = $state("flow");
 
 	const langs = [
 		{ id: "en", label: "EN" },
 		{ id: "de", label: "DE" },
 		{ id: "cn", label: "CN" },
 	];
-	let lang = "en";
+	let lang = $state("en");
 </script>
 
 <div class="toolbar">

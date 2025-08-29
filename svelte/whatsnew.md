@@ -1,3 +1,10 @@
+## 2.2.1
+
+### Fixes
+
+-   Using in Salesforce environment
+-   Applying default base locale
+
 ## 2.2.0
 
 ### New features
