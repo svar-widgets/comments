@@ -1,10 +1,10 @@
 <script>
-	import { Locale, Segmented } from "wx-svelte-core";
+	import { Locale, Segmented } from "@svar-ui/svelte-core";
 	import { Comments } from "../../src/index";
 	import { getData } from "../data";
 
-	import { de, cn } from "wx-comments-locales";
-	import { de as deCore, cn as cnCore } from "wx-core-locales";
+	import { de, cn } from "@svar-ui/comments-locales";
+	import { de as deCore, cn as cnCore } from "@svar-ui/core-locales";
 
 	const { data, users } = getData();
 	const options = [

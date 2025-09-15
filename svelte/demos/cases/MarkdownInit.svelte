@@ -1,5 +1,5 @@
 <script>
-	import { Segmented } from "wx-svelte-core";
+	import { Segmented } from "@svar-ui/svelte-core";
 	import { Comments } from "../../src/index";
 	import { getMarkdownData } from "../data";
 

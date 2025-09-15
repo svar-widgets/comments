@@ -1,5 +1,5 @@
 <script>
-	import { Willow } from "wx-svelte-core";
+	import { Willow } from "@svar-ui/svelte-core";
 
 	const { children, fonts } = $$props;
 </script>

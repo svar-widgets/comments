@@ -1,6 +1,6 @@
 <script>
-	import { Segmented } from "wx-svelte-core";
-	import { RestURL } from "wx-lib-data-provider";
+	import { Segmented } from "@svar-ui/svelte-core";
+	import { RestURL } from "@svar-ui/lib-data-provider";
 	import { Comments } from "../../src/index";
 	import { getData } from "../data";
 

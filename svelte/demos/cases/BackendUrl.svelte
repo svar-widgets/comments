@@ -1,5 +1,5 @@
 <script>
-	import { RestURL } from "wx-lib-data-provider";
+	import { RestURL } from "@svar-ui/lib-data-provider";
 	import { Comments } from "../../src/index";
 
 	import { getData } from "../data";

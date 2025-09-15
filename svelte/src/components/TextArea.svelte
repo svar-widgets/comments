@@ -1,6 +1,6 @@
 <script>
 	import { onMount, getContext } from "svelte";
-	import { TextArea, Button } from "wx-svelte-core";
+	import { TextArea, Button } from "@svar-ui/svelte-core";
 	import UserIcon from "./Messages/UserIcon.svelte";
 
 	let {

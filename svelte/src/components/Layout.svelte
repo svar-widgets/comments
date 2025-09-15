@@ -2,9 +2,9 @@
 	import { getContext, setContext, untrack } from "svelte";
 	import Messages from "./Messages.svelte";
 	import TextArea from "./TextArea.svelte";
-	import { ActionMenu } from "wx-svelte-menu";
-	import { uid } from "wx-lib-state";
-	import { dateToString } from "wx-lib-dom";
+	import { ActionMenu } from "@svar-ui/svelte-menu";
+	import { uid } from "@svar-ui/lib-state";
+	import { dateToString } from "@svar-ui/lib-dom";
 
 	let {
 		onaction,
