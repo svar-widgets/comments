@@ -3,7 +3,7 @@
 	import { messages, formats } from "./index.js";
 
 	const {
-		text,
+		content,
 		date,
 		owned,
 		render,
@@ -11,7 +11,7 @@
 		author,
 		edit,
 		onpost,
-		oncancel
+		oncancel,
 	} = $props();
 
 	const BoxRender = typeof render === "string" ? messages[render] : render;
@@ -20,8 +20,8 @@
 
 <BoxRender {owned} {edit} {author} {date}>
 	{#if edit && edit === owned}
-		<TextArea focus={true} {onpost} {oncancel} value={text} />
+		<TextArea focus={true} {onpost} {oncancel} value={content} />
 	{:else}
-		<TextRender {text} {edit} />
+		<TextRender {content} />
 	{/if}
 </BoxRender>

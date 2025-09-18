@@ -2,24 +2,18 @@
 	import { getContext } from "svelte";
 	import UserIcon from "./UserIcon.svelte";
 
-	const {
-		owned,
-		author,
-		date,
-		edit,
-		children,
-	} = $props();
+	const { owned, author, date, edit, children } = $props();
 
 	const dateFormatter = getContext("wx-comments-format").dateStr;
 </script>
 
-<div class="wx-flow" class:owned>
+<div class="wx-flow" class:wx-owned={owned}>
 	<div class="wx-flow-toolbar">
 		<UserIcon data={author} />
 		<span class="wx-author-name">{author.name}</span>
 		{#if owned && owned !== edit}
 			<div class="wx-menu-icon" data-comment-menu-id={owned}>
-				<i class="wx-icon wxi-dots-v" ></i>
+				<i class="wx-icon wxi-dots-v"></i>
 			</div>
 		{/if}
 	</div>
@@ -35,7 +29,7 @@
 		padding: 16px 20px;
 		border-radius: 6px;
 	}
-	.wx-flow.owned {
+	.wx-flow.wx-owned {
 		background-color: var(--wx-comments-msg-background-agent);
 	}
 	.wx-flow:hover .wx-menu-icon {

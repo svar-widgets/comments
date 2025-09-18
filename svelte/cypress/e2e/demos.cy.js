@@ -1,6 +1,6 @@
 const cases = ["/base/:skin"];
 
-const skins = ["willow", "willow-dark"];
+const skins = ["willow", "willow-dark", "material"];
 const links = [];
 
 cases.forEach(w => {

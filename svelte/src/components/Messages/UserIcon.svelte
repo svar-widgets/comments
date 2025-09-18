@@ -12,13 +12,19 @@
 		border = true,
 	} = $props();
 
-	const firstLetters = $derived(data.name
-		.split(" ")
-		.map(name => name[0])
-		.join(""));
+	const firstLetters = $derived(
+		data.name
+			.split(" ")
+			.map(name => name[0])
+			.join("")
+	);
 
 	let style = $derived(data.color ? `background: ${data.color};` : "");
-	let css = $derived(data.color ? `wx-comments-avatar-color-${getContrastingColor(data.color)}` : "");
+	let css = $derived(
+		data.color
+			? `wx-comments-avatar-color-${getContrastingColor(data.color)}`
+			: ""
+	);
 </script>
 
 <div class="wx-user wx-{size} {css}" class:wx-border={border} {style}>
@@ -29,8 +35,6 @@
 
 <style>
 	.wx-user {
-		--wx-comments-user-icon-size: 36px;
-
 		font-size: 12px;
 		font-weight: 500;
 		line-height: 12px;
@@ -45,8 +49,8 @@
 	}
 
 	.wx-user.wx-normal {
-		width: var(--wx-comments-user-icon-size);
-		height: var(--wx-comments-user-icon-size);
+		width: 36px;
+		height: 36px;
 		font-size: var(--wx-font-size);
 	}
 

@@ -1,3 +1,13 @@
+## 2.3.0
+
+### New features
+
+-   TypeScript definitions
+
+### Fixes
+
+-   Incorrect rendering of a custom component for messages and contents
+
 ## 2.2.1
 
 ### Fixes

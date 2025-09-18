@@ -17,7 +17,7 @@
 <div class="wx-messages wx-{css}">
 	{#each data as message (message.id)}
 		<Message
-			text={message.content}
+			content={message.content}
 			date={message.date}
 			author={message.author}
 			owned={message.author.id === author.id ? message.id : null}

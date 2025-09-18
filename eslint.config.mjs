@@ -52,7 +52,8 @@ export default [{
 
                 files: ["**/*.svelte"],
                 rules: {
-                        "@typescript-eslint/no-unused-expressions": "off"
+                        "@typescript-eslint/no-unused-expressions": "off",
+                        "svelte/no-at-html-tags": "off"
                 }
         },
         {       

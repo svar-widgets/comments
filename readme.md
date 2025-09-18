@@ -2,9 +2,9 @@
 
 # SVAR Svelte Comments
 
-[![npm](https://img.shields.io/npm/v/wx-svelte-comments.svg)](https://www.npmjs.com/package/wx-svelte-comments)
+[![npm](https://img.shields.io/npm/v/@svar-ui/svelte-comments.svg)](https://www.npmjs.com/package/@svar-ui/svelte-comments)
 [![License](https://img.shields.io/github/license/svar-widgets/comments)](https://github.com/svar-widgets/comments/blob/main/license.txt)
-[![npm downloads](https://img.shields.io/npm/dm/wx-svelte-comments.svg)](https://www.npmjs.com/package/wx-svelte-comments)
+[![npm downloads](https://img.shields.io/npm/dm/@svar-ui/svelte-comments.svg)](https://www.npmjs.com/package/@svar-ui/svelte-comments)
 
 </div>
 
@@ -28,7 +28,7 @@ To use the widget, simply import the package and include the component in your S
 
 ```svelte
 <script>
-	import { Comments } from "wx-svelte-comments";
+	import { Comments } from "@svar-ui/svelte-comments";
 
 	const value = [];
 </script>

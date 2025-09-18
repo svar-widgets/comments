@@ -11,14 +11,14 @@ export function getData(n) {
 			id: 2,
 			user: 2,
 			content:
-				"Hi, Diego. I am sure that that's exactly what is thought best out there in Dunwall. Let's just do what we are supposed to do to get the result.",
+				"Hi, Alice. I am sure that that's exactly what is thought best out there in Dunwall. Let's just do what we are supposed to do to get the result.",
 			date: new Date(),
 		},
 		{
 			id: 3,
 			user: 3,
 			content:
-				"Absolutely, Diego. Action speaks louder than words, and in this case, it's about executing the plan efficiently. Let's prioritize tasks and tackle them head-on.",
+				"Absolutely, Alice. Action speaks louder than words, and in this case, it's about executing the plan efficiently. Let's prioritize tasks and tackle them head-on.",
 			date: new Date(),
 		},
 	];
@@ -80,7 +80,7 @@ I would like to share my **insights** on this task. I reckon we should deal with
 			id: 2,
 			user: 2,
 			content:
-				"Hi, **Diego**. I am sure that that's *exactly what is thought best out there* in Dunwall. Let's just do what we are supposed to do to get the result.",
+				"Hi, **Laura**. I am sure that that's *exactly what is thought best out there* in Dunwall. Let's just do what we are supposed to do to get the result.",
 			date: new Date(),
 		},
 	];
