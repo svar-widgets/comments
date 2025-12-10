@@ -15,7 +15,7 @@
 <div class="toolbar">
 	<Segmented bind:value={render} {options} />
 </div>
-<div style="margin: auto; max-width: 700px; margin-top: 40px;">
+<div style="margin: 20px; max-width: 700px; margin-top: 40px;">
 	{#key render}
 		<Comments focus={true} value={data} {users} activeUser={1} {render} />
 	{/key}

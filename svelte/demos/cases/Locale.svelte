@@ -26,7 +26,7 @@
 	<Segmented options={langs} bind:value={lang} />
 	<Segmented bind:value={render} {options} />
 </div>
-<div style="margin: auto; max-width: 700px; margin-top: 40px;">
+<div style="margin: 20px; max-width: 700px; margin-top: 40px;">
 	{#key render}
 		{#if lang === "de"}
 			<Locale words={{ ...de, deCore }}>

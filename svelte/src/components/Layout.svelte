@@ -29,6 +29,8 @@
 	setContext("wx-comments-format", {
 		dateStr: date => dateFormatter(date),
 	});
+	//prevent associating TextArea with outer Field label
+	setContext("wx-input-id", null);
 
 	let edit = $state(null);
 	let value = $state("");

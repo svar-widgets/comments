@@ -13,6 +13,7 @@ context("Basic functionality", () => {
 	it("widget", () => {
 		links.forEach(w => {
 			cy.visit(`/index.html#${w}`);
+			cy.get("body").click({ force: true });
 			cy.shot(w, { area: ".content" });
 		});
 	});

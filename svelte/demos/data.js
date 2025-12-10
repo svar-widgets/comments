@@ -5,21 +5,21 @@ export function getData(n) {
 			user: 1,
 			content:
 				"Greetings, fellow colleagues. I would like to share my insights on this task. I reckon we should deal with at least half of the points in the plan without further delays.",
-			date: new Date(),
+			date: new Date(2024, 0, 15, 10, 30, 0),
 		},
 		{
 			id: 2,
 			user: 2,
 			content:
 				"Hi, Alice. I am sure that that's exactly what is thought best out there in Dunwall. Let's just do what we are supposed to do to get the result.",
-			date: new Date(),
+			date: new Date(2024, 0, 15, 11, 45, 0),
 		},
 		{
 			id: 3,
 			user: 3,
 			content:
 				"Absolutely, Alice. Action speaks louder than words, and in this case, it's about executing the plan efficiently. Let's prioritize tasks and tackle them head-on.",
-			date: new Date(),
+			date: new Date(2024, 0, 15, 14, 20, 0),
 		},
 	];
 
@@ -74,14 +74,14 @@ export function getMarkdownData(n) {
 			content: `### Greetings
 				
 I would like to share my **insights** on this task. I reckon we should deal with at least half of the points in the plan without further delays.`,
-			date: new Date(),
+			date: new Date(2024, 0, 15, 10, 30, 0),
 		},
 		{
 			id: 2,
 			user: 2,
 			content:
 				"Hi, **Laura**. I am sure that that's *exactly what is thought best out there* in Dunwall. Let's just do what we are supposed to do to get the result.",
-			date: new Date(),
+			date: new Date(2024, 0, 15, 11, 45, 0),
 		},
 	];
 

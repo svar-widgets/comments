@@ -10,3 +10,8 @@ Cypress.Commands.add("shot", (...args) => {
 	if (conf.area) cy.get(conf.area).screenshot(name, sconf);
 	else cy.screenshot(name, sconf);
 });
+
+Cypress.Commands.add("addComment", (text, selector = ".wx-comments-list") => {
+	cy.get(`${selector} textarea`).type(text);
+	cy.get(`${selector} button`).contains("Add").click();
+});
