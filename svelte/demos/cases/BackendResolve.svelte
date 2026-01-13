@@ -5,7 +5,7 @@
 	import { getData } from "../data";
 
 	const url = new RestURL(
-		"https://master--svar-comments-go--dev.webix.io/comments"
+		"https://comments-backend.svar.dev/comments"
 	);
 	const users = getData().users;
 
