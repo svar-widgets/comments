@@ -1,14 +1,9 @@
 <script>
 	import { getContext } from "svelte";
+	import { setID } from "@svar-ui/lib-dom";
 	import UserIcon from "./UserIcon.svelte";
 
-	const {
-		owned,
-		author,
-		date,
-		edit,
-		children,
-	} = $props();
+	const { owned, author, date, edit, children } = $props();
 
 	const dateFormatter = getContext("wx-comments-format").dateStr;
 </script>
@@ -28,7 +23,10 @@
 								{dateFormatter(date)}
 							</div>{/if}
 					</div>
-					<div class="wx-menu-icon" data-comment-menu-id={owned}>
+					<div
+						class="wx-menu-icon"
+						data-comment-menu-id={setID(owned)}
+					>
 						<i class="wx-icon wxi-dots-v"></i>
 					</div>
 				</div>

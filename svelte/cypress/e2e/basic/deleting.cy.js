@@ -23,7 +23,7 @@ context("Deleting comments", () => {
 		cy.get(".wx-messages .wx-flow").should("have.length", 3);
 
 		cy.get(".wx-messages .wx-flow").first().find(".wx-menu-icon").click();
-		cy.get('[data-id="delete-comment"]').click();
+		cy.wxC("menu-item", "delete-comment").click();
 
 		cy.get(".wx-messages .wx-flow").should("have.length", 2);
 

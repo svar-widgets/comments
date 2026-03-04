@@ -6,9 +6,9 @@
 	const users = getData().users;
 
 	const loadURL =
-		"https://comments-backend.svar.dev/comments-info/1";
+		"https://master--svar-comments-go--dev.webix.io/comments-info/1";
 	const saveURL = new RestURL(
-		"https://comments-backend.svar.dev/comments/1"
+		"https://master--svar-comments-go--dev.webix.io/comments/1"
 	);
 
 	let value = $state([]);

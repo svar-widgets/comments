@@ -3,7 +3,7 @@ context("Editing comments", () => {
 		cy.visit(`/index.html#/base/willow`);
 
 		cy.get(".wx-messages .wx-flow").first().find(".wx-menu-icon").click();
-		cy.get('[data-id="edit-comment"]').click();
+		cy.wxC("menu-item", "edit-comment").click();
 
 		const editedComment = "This comment has been edited";
 		cy.get(".wx-messages .wx-flow")
